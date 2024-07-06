@@ -1,0 +1,664 @@
+@import url("https://uilight.netlify.app/main.css");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+
+:root {
+    --background-color: #F9F7F7;
+    --primary-color: #DBE2EF;
+    --secondary-color: #3F72AF;
+    --tertiary-color:#112D4E;
+    --text-color-primary: #333333;
+    --accent-color: var(--tertiary-color);
+    --container-border-color: #dddddd;
+    --overlay: rgba(0, 0, 0, 0.3);
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.home {
+    width: 100%;
+    height: 100%;
+    color: var(--text-color-primary);
+}
+
+.Navbar-container {
+    padding-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 3.4rem;
+    box-shadow: 0 8px 4px var(--accent-color);
+    background-color: var(--tertiary-color);
+    position: fixed; 
+    top:0; 
+    left: 0; 
+    z-index: 1000; 
+}
+
+.logo {
+    padding-left: 2.5rem;
+    width: 16rem;
+    height: 2rem;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+.india-flag {
+    height: 35px;
+    width: 40px;
+    border-radius: 5px;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.login-btn {
+    padding: 0.5rem 1.5rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--secondary-color);
+    /* color: white; */
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.login-btn:hover {
+    transform: scale(1.05);
+}
+
+.heading-container {
+    display: flex;
+    margin-top: 4.5rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    border-radius: 0.4rem;
+    width: 93%;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-color);
+}
+
+.heading-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.heading-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7rem;
+    height: 0.5rem;
+}
+
+.heading-option {
+    transition: transform 0.2s ease;
+    font-weight: bolder;
+}
+
+.heading-option:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* padding-left: 2.5rem;
+    padding-right: 2.5rem; */
+}
+
+.container1 {
+    display: flex;
+    padding-top: 2rem;
+    /* padding: 10rem; */
+    width: 93%;
+}
+
+.contest-list {
+    flex: 4;
+    margin-right: 20px;
+    width: 55rem;
+}
+
+.contest {
+    background-color: var(--background-color);
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    display: flex;
+    gap: 450px;
+    justify-content: space-start;
+}
+
+.contest:hover {
+    transform: translateY(-1px);
+    box-shadow: 2px 2px 10px 2px rgba(143, 110, 226, 0.2);
+}
+
+.arrow-btn {
+    cursor: pointer;
+}
+
+.contest h2 {
+    margin: 0 0 10px 0;
+}
+
+.contest-details {
+    margin-top: 1rem;
+    background-color: var(--primary-color);
+    padding: 1rem;
+    border-radius: 10px;
+    display: none;
+    width: 200%;
+}
+
+.sidebar {
+    flex: 1;
+    width: 18rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 45px;
+}
+
+.sidebar-item {
+    background-color: var(--primary-color);
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.sidebar-item:hover {
+    transform: translateY(-5px);
+}
+
+.sidebar-item h3 {
+    margin: 0 0 10px 0;
+}
+
+.sidebar-item .button {
+    background-color: var(--secondary-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: transform 0.3s ease;
+}
+
+.sidebar-item .button:hover {
+    background-color: var(--secondary-color);
+    /* Darker yellow */
+    transform: scale(1.05);
+}
+
+.p {
+    color: var(--text-color-primary);
+    width: 70%;
+}
+
+.sponsored {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.spons1 {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.spons2 {
+    flex: 2;
+}
+
+.content {
+    margin-top: 20px;
+    /* display: flex;
+    flex-wrap: wrap; */
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.course {
+    background-color: var(--accent-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    width: 40%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex start;
+    gap: 20px;
+}
+
+.course:hover {
+    transform: translateY(-5px);
+}
+
+.course_title {
+    margin-bottom: 10px;
+}
+
+.course_desc {
+    color: var(--text-color-primary);
+    font-size: 20px;
+    font-weight: 200px;
+    font-family: cursive;
+}
+
+.course-btn {
+    background-color: var(--tertiary-color);
+    border: none;
+    width: 45%;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    color: var(--secondary-color);
+    transition: transform 0.3s ease;
+}
+
+.course-btn:hover {
+    background-color:lightblue;
+    /* Darker yellow */
+    transform: scale(1.05);
+}
+
+.cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    background-color: var(--background-color);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s, height 0.3s, opacity 0.3s;
+}
+
+.cursor.hover {
+    width: 20px;
+    height: 20px;
+}
+
+.container {
+    border-color: var(--accent-color);
+    width: 100%;
+}
+
+.heading-option {
+    color: var(--background-color);
+    font-weight: 600px;
+    font-size: 19px;
+}
+
+.coursetot {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 80px;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.infinite1 {
+    width: 100%;
+    overflow: hidden;
+    /* padding: 10px 0; */
+    background-color: var(--primary-color);
+    box-shadow: 0px 0px 7px 0px var(--secondary-color);
+    margin-bottom: 20px;
+    white-space: nowrap;
+    border-radius: 10px;
+    /* border: 5px solid white; */
+    /* border-bottom:15px solid white; */
+}
+
+.marquee-content {
+    display: inline-block;
+    animation: marquee 20s linear infinite;
+}
+
+.marquee-content span {
+    display: inline-block;
+    padding: 0 2rem;
+    font-size: 1.2rem;
+    color: var(--text-color-primary);
+}
+
+.lgm {
+    color: black;
+}
+
+
+@keyframes marquee {
+    6% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.infinte2 {
+    width: 100%;
+    overflow: hidden;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px var(--secondary-color);
+    margin-bottom: 20px;
+    background-color: var(--background-color);
+    white-space: nowrap;
+}
+
+.marquee-content2 {
+    display: inline-block;
+    animation: marquee2 20s linear infinite;
+}
+
+.marquee-content2 span {
+    display: inline-block;
+    padding: 0 2rem;
+    font-size: 1.2rem;
+    color: var(--text-color-primary);
+}
+
+
+
+@keyframes marquee2 {
+    6% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.by {
+    display: inline-block;
+    font-size: 25px;
+}
+
+.epic-content {
+    display: flex;
+
+}
+
+.epic-left {
+    width: 60%;
+    font-size: 20px;
+
+}
+
+.epic-right {
+    width: 40%;
+    height: 60%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+}
+
+.epic-right img {
+    border-radius: 50%;
+    height: 90%;
+    width: 90%;
+}
+
+.blog {
+    border-radius: 10px;
+    /* border: 5px solid #032E4F; */
+    box-shadow: 0 4px 6px var(--secondary-color);
+    padding: 20px;
+    background-color: var(--primary-color);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 15px;
+
+}
+
+.prof-det {
+    line-height: 1.8;
+}
+
+.clickable {
+    color: black;
+}
+
+.non-clickable {
+    color: black;
+    font-weight: bolder;
+}
+
+.prizes {
+    line-height: 1.8;
+}
+
+.container-prob {
+    display: flex;
+
+}
+
+.progress-container {
+    width: 30%;
+    background-color: var(--primary-color);
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+    height: 30px;
+}
+
+.progress-bar {
+    width: 80%;
+    /* 80% filled */
+    height: 30px;
+    /* Height of the progress bar */
+    background-color: var(--tertiary-color);
+    /* Red fill color */
+    border-radius: 25px;
+    /* Rounded corners */
+    text-align: center;
+    /* Center the text */
+    line-height: 30px;
+    /* Center the text vertically */
+    color: var(--background-color);
+    /* Text color */
+    font-weight: bold;
+    /* Bold text */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Smooth transition */
+}
+
+.progress-container:hover .progress-bar {
+    background-color: red;
+    cursor: pointer;
+    /* Transparent background on hover */
+    color: transparent;
+    /* Transparent text on hover */
+}
+
+.progress-container:hover .hover-text {
+    opacity: 1;
+    /* Show hover text */
+}
+
+.hover-text {
+    position: absolute;
+    /* Position relative to container */
+    top: 50%;
+    /* Center vertically */
+    left: 50%;
+    /* Center horizontally */
+    transform: translate(-50%, -50%);
+    /* Center alignment */
+    /* color: black; */
+    /* Black text color */
+    font-weight: bold;
+    /* Bold text */
+    opacity: 0;
+    /* Hidden by default */
+    transition: opacity 0.3s ease;
+    /* Smooth transition */
+}
+
+.spons1 img {
+    height: 100%;
+    width: 100%;
+}
+/* 
+.register-button {
+} */
+
+
+
+.register-button:hover {
+    
+    color: lightblue;
+    cursor: pointer;
+}
+/* 
+.register-button:active {
+   } */
+   .register-btn {
+    background-color: var(--tertiary-color);
+    border: none;
+    width: 45%;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    color: var(--secondary-color);
+    transition: transform 0.3s ease;
+}
+
+.register-btn:hover {
+    background-color:lightblue;
+    /* Darker yellow */
+    transform: scale(1.05);
+}
+  
+
+
+.a-cont {
+    text-decoration: none;
+    /* Removes the underline */
+    color: black;
+    font-weight: bolder;
+}
+
+.a-cont:hover {
+    color: rgb(3, 3, 35);
+    /* Darker color on hover */
+}
+
+/* Example: Specific styling for a certain class of anchor tags */
+.a-cont.custom-link {
+    color: var(--primary-color);
+    /* Custom color for specific links with this class */
+}
+
+/* Change color on hover for specific class */
+.a-cont.custom-link:hover {
+    color: var(--primary-color);
+    /* Different color on hover for specific links with this class */
+}
+.highlight1::before
+{
+    content: "t";
+    color:black;
+}
+.highlight2::before
+{
+    content: "j";
+    color:black;
+}
+.highlight3::before
+{
+    content: "B";
+    color:black;
+}
+.highlight4::before
+{
+    content: "e";
+    color:black;
+}
+.highlight5::before
+{
+    content: "o";
+    color:black;
+}
+.highlight6::before
+{
+    content: "G";
+    color:black;
+}
+.highlight7::before
+{
+    content: "c";
+    color:black;
+}
+.highlight8::before
+{
+    content: "R";
+    color:black;
+}
+.highlight9::before
+{
+    content: "j";
+    color:black;
+}
+.highlight10::before
+{
+    content: "g";
+    color:black;
+}
+.highlight_a::before
+{
+    content: "m";
+    color:black;
+}
+.highlight_b::before
+{
+    content: "p";
+    color:black;
+}
